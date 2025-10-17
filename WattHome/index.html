@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WattHome | Smart Energy Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">⚡ WattHome</div>
+    <div class="nav-actions">
+      <i class="icon">⚙️</i>
+      <i class="icon">🌙</i>
+    </div>
+  </header>
+
+  <section class="overview">
+    <h2>Energy Overview</h2>
+    <div class="cards">
+      <div class="card">
+        <p>Monthly Usage</p>
+        <h3>0 kWh</h3>
+        <small>↓ 12% from last month</small>
+      </div>
+      <div class="card">
+        <p>Current Bill</p>
+        <h3 class="danger">₹0</h3>
+      </div>
+      <div class="card">
+        <p>Potential Savings</p>
+        <h3 class="success">₹180 /month</h3>
+        <small>↓ Target: ₹200</small>
+      </div>
+    </div>
+
+    <div class="goal">
+      <p><strong>10% Energy Reduction Goal</strong></p>
+      <div class="progress-bar">
+        <div class="progress" style="width:80%"></div>
+      </div>
+      <div class="goal-stats">
+        <span>Current Usage: 0 kWh</span>
+        <span>Target Usage: 0 kWh</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tips-report">
+    <div class="tips">
+      <h2>Energy Saving Tips</h2>
+      <div class="tip">
+        <span>💡</span>
+        <div>
+          <p>Set your AC temperature to 24°C instead of 18°C. Every degree increase saves 6% energy.</p>
+          <small>Cooling | Save ₹450/month</small>
+        </div>
+      </div>
+      <div class="tip">
+        <span>💡</span>
+        <div>
+          <p>Switch to LED bulbs throughout your home. They use 75% less energy than traditional bulbs.</p>
+          <small>Lighting | Save ₹120/month</small>
+        </div>
+      </div>
+      <div class="tip">
+        <span>💡</span>
+        <div>
+          <p>Unplug devices when not in use. Standby power can account for 10% of your electricity bill.</p>
+          <small>General | Save ₹150/month</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="report">
+      <h2>Monthly Report</h2>
+      <div class="report-card">
+        <p><strong>Potential Savings</strong></p>
+        <h3>₹180</h3>
+        <small>per month</small>
+      </div>
+      <div class="report-card">
+        <p><strong>CO₂ Reduction</strong></p>
+        <h3>25 kg</h3>
+        <small>Equivalent to 3 trees planted</small>
+      </div>
+      <button class="share">📤 Share Report</button>
+    </div>
+  </section>
+
+  <button class="add-btn" onclick="openModal()">+ Add Appliance</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Add New Appliance</h3>
+      <div class="quick">
+        <button>Air Conditioner (1.5 Ton)</button>
+        <button>Refrigerator</button>
+        <button>LED TV 55-inch</button>
+        <button>Ceiling Fan</button>
+        <button>LED Bulb 9W</button>
+        <button>Washing Machine</button>
+      </div>
+      <input type="text" placeholder="Appliance Name e.g., Living Room AC" />
+      <input type="number" placeholder="Power (Watts) e.g., 1500" />
+      <input type="number" placeholder="Hours per Day e.g., 8" />
+      <select>
+        <option>Select category</option>
+        <option>Cooling</option>
+        <option>Lighting</option>
+        <option>General</option>
+      </select>
+      <button class="add">Add Appliance</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
